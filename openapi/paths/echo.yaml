@@ -25,12 +25,6 @@ post:
           examples:
             response:
               value: Hello world!
-        application/xml:
-          schema:
-            type: string
-        text/csv:
-          schema:
-            type: string
     '400':
       description: Unauthorized
   requestBody:
@@ -39,16 +33,6 @@ post:
         schema:
           type: string
           example: Hello world!
-      application/xml:
-        schema:
-          type: string
-          example: Hello world!
     description: Echo payload
     required: true
-  x-codeSamples:
-    - lang: C#
-      source:
-        $ref: ../code_samples/C_sharp/echo/post.cs
-    - lang: PHP
-      source:
-        $ref: ../code_samples/PHP/echo/post.php
+
