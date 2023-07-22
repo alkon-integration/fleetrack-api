@@ -7,7 +7,7 @@ frontend:
     build:
       commands:
         - npm run build
-        - npx redocly build-docs
+        - npx redocly build-docs --output=index.html
   artifacts:
     # IMPORTANT - Please verify your build output directory
     baseDirectory: /
