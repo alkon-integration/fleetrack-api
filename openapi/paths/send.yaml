@@ -1,10 +1,10 @@
 post:
   tags:
-    - Tag
-  summary: Operation summary with examples
+    - Message
+  summary: Operación
   description: |
-    Operation description **markdown**.
-  operationId: postPathItemWithExamples
+    Construir el paquete XML dependiendo del estado ingresado e insertarlo en la Cola de Command.
+  operationId: operationId
   security:
     - api_key: []
     - basic_auth: []
@@ -13,15 +13,6 @@ post:
       application/json:
         schema:
           $ref: ../components/schemas/Schema.yaml
-        examples:
-          mapName:
-            summary: My first example
-            description: My first example's description.
-            value:
-              stringProperty: tada
-          mapNameDoesNotShowInDocsUnlessSummaryIsNotProvided:
-            value:
-              stringProperty: checkmark
     description: requestBody description
     required: true
   responses:
@@ -29,7 +20,7 @@ post:
       description: OK
       headers:
         X-Rate-Limit:
-          description: calls per hour allowed by the user
+          description: Calls per hour allowed by the user.
           schema:
             type: integer
             format: int32
