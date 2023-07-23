@@ -15,6 +15,7 @@ info:
     # Introducción
 
     API para ser llamada por aplicaciones móviles de melón 
+    URL base: https://api.fleetrack.eu/alkon/v1
 
 servers:
   - url: https://api.fleetrack.eu/alkon/v1
