@@ -17,18 +17,6 @@ post:
     required: true
   responses:
     '200':
-      description: OK
-      headers:
-        X-Rate-Limit:
-          description: Calls per hour allowed by the user.
-          schema:
-            type: integer
-            format: int32
-        X-Expires-After:
-          $ref: ../components/headers/ExpiresAfter.yaml
-      content:
-        application/json:
-          schema:
-            $ref: ../components/schemas/Schema.yaml
+      description: OK      
     '400':
       $ref: ../components/responses/Problem.yaml
