@@ -13,9 +13,9 @@ info:
     url: https://fleetrack.cl/web/image/website/1/logo/My%20Website?unique=5930cda
   description: >
     # Introducción
-
     API para ser llamada por aplicaciones móviles de melón 
-    URL base: https://api.fleetrack.eu/alkon/v1
+    # URL base
+    https://api.fleetrack.eu/alkon/v1
 
 servers:
   - url: https://api.fleetrack.eu/alkon/v1
