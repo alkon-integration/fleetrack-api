@@ -19,4 +19,4 @@ post:
     '200':
       description: OK      
     '400':
-      $ref: ../components/responses/Problem.yaml
+      description: Error
