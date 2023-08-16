@@ -4,7 +4,7 @@ post:
   summary: Enviar mensaje
   description: |
     Construir el paquete XML dependiendo del estado ingresado e insertarlo en la Cola de Command.
-  operationId: operationId
+  operationId: sendMessage
   security:
     - api_key: []
     - basic_auth: []
@@ -17,6 +17,6 @@ post:
     required: true
   responses:
     '200':
-      description: OK      
+      description: OK
     '400':
       description: Error

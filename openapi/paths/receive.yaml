@@ -4,7 +4,7 @@ post:
   summary: Recibir mensaje
   description: |
     Recibir datos de guia, camion, fecha y direccion de la obra
-  operationId: operationId
+  operationId: receiveMessage
   security:
     - api_key: []
     - basic_auth: []
