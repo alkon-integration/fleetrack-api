@@ -1,0 +1,33 @@
+type: object
+title: Scalars
+properties:
+  mixer:
+    description: Codigo del mixer
+    type: integer
+    examples:
+      - 2310
+  ticket:
+    description: Codigo de la guía
+    type: integer
+    examples:
+      - 341
+  date:
+    description: Fecha y hora. Numero de milisegundos desde 1 de Enero de 1970.
+    type: number
+    examples:
+      - 1692215579023
+  jobCode:
+    description: Codigo de la obra
+    type: string
+    examples:
+      - 1234
+  jobAddress:
+    description: Dirección de la obra
+    type: string
+    examples:
+      - Passeo huerfanos 1400, Santiago
+  jobCoordinate:
+    type: string
+    examples:
+      - 33.440438,-70.656986
+    description: Latitude / Longitude de la obra

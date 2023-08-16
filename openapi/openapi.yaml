@@ -25,6 +25,8 @@ servers:
 paths:
   /send:
     $ref: paths/send.yaml
+  /receive:
+    $ref: paths/receive.yaml
 components:
   securitySchemes:
     api_key:
