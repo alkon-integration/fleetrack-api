@@ -27,6 +27,8 @@ paths:
     $ref: paths/send.yaml
   /receive:
     $ref: paths/receive.yaml
+  /tickets:
+    $ref: paths/tickets.yaml
 components:
   securitySchemes:
     api_key:

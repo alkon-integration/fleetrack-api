@@ -1,0 +1,43 @@
+get:
+  tags:
+    - Tickets
+  summary: Obtener guías
+  description: |
+    Obtener los datos de las guías.
+  operationId: tickets
+  security:
+    - api_key: []
+    - basic_auth: []
+  parameters:
+    - name: from
+      in: query
+      required: true
+      description: >
+        Start date (inclusive) for filtering tickets by creation date.
+        Expected format: YYYY-MM-DD.
+      schema:
+        type: string
+        format: date
+        example: "2025-01-01"
+    - name: to
+      in: query
+      required: false
+      description: >
+        End date (inclusive) for filtering tickets by creation date.
+        Expected format: YYYY-MM-DD.
+      schema:
+        type: string
+        format: date
+        example: "2025-01-31"
+  
+  responses:
+    '200':
+      description: List of tickets or a single ticket
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '../components/schemas/Ticket.yaml'
+    '400':
+      description: Error

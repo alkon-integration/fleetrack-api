@@ -1,0 +1,87 @@
+type: object
+properties:
+  id:
+    type: string
+    description: Unique ticket identifier.
+    example: "11250304"
+
+  mixer:
+    type: string
+    description: Identifier of the mixer associated with this ticket.
+    example: "2020"
+
+  job_ticket_code:
+    type: string
+    description: Id for the job associated with the ticket.
+    example: "OB248810"
+
+  timestamp:
+    type: string
+    format: date-time
+    description: The time the ticket was received.
+    example: "2025-01-20T14:32:00Z"
+
+  date:
+    type: string
+    format: date-time
+    description: The time the ticket was generated for.
+    example: "2025-01-20T14:32:00Z"
+
+  aobra:
+    type: string
+    format: date-time
+    nullable: true
+    description: Time of arrival at the work site (A Obra).
+    example: "2025-01-20T15:00:00Z"
+
+  eobra:
+    type: string
+    format: date-time
+    nullable: true
+    description: Time of exit from the work site (E Obra).
+    example: "2025-01-20T16:10:00Z"
+
+  wash:
+    type: string
+    format: date-time
+    nullable: true
+    description: Time when the wash event occurred.
+    example: "2025-01-20T16:30:00Z"
+
+  aplanta:
+    type: string
+    format: date-time
+    nullable: true
+    description: Time of arrival at the plant (A Planta).
+    example: "2025-01-20T17:00:00Z"
+
+  eplanta:
+    type: string
+    format: date-time
+    nullable: true
+    description: Time of exit from the plant (E Planta).
+    example: "2025-01-20T17:30:00Z"
+
+  descarga:
+    type: string
+    format: date-time
+    nullable: true
+    description: Time of unload / discharge (Descarga).
+    example: "2025-01-20T15:30:00Z"
+
+  distancia:
+    type: number
+    format: double
+    description: Distance associated with this ticket (e.g. km).
+    example: 12.34
+
+  cerrada:
+    type: boolean
+    description: Whether the ticket is closed.
+    example: true
+
+  status:
+    type: string
+    description: Current status of the ticket.
+    enum: [open, in_progress, closed]
+    example: open
