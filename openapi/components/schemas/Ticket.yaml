@@ -28,44 +28,50 @@ properties:
     example: "2025-01-20T14:32:00Z"
 
   aobra:
-    type: string
+    type:
+      - string
+      - 'null'
     format: date-time
-    nullable: true
     description: Time of arrival at the work site (A Obra).
     example: "2025-01-20T15:00:00Z"
 
   eobra:
-    type: string
+    type:
+      - string
+      - 'null'
     format: date-time
-    nullable: true
     description: Time of exit from the work site (E Obra).
     example: "2025-01-20T16:10:00Z"
 
   wash:
-    type: string
+    type:
+      - string
+      - 'null'
     format: date-time
-    nullable: true
     description: Time when the wash event occurred.
     example: "2025-01-20T16:30:00Z"
 
   aplanta:
-    type: string
+    type:
+      - string
+      - 'null'
     format: date-time
-    nullable: true
     description: Time of arrival at the plant (A Planta).
     example: "2025-01-20T17:00:00Z"
 
   eplanta:
-    type: string
+    type:
+      - string
+      - 'null'
     format: date-time
-    nullable: true
     description: Time of exit from the plant (E Planta).
     example: "2025-01-20T17:30:00Z"
 
   descarga:
-    type: string
+    type:
+      - string
+      - 'null'
     format: date-time
-    nullable: true
     description: Time of unload / discharge (Descarga).
     example: "2025-01-20T15:30:00Z"
 

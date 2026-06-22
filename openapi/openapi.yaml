@@ -29,6 +29,8 @@ paths:
     $ref: paths/receive.yaml
   /tickets:
     $ref: paths/tickets.yaml
+  /virtual-seal/{ticket}:
+    $ref: paths/virtual-seal_{ticket}.yaml
 components:
   securitySchemes:
     api_key:

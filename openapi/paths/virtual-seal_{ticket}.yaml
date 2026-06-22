@@ -1,0 +1,39 @@
+post:
+  tags:
+    - Sello Virtual
+  summary: Generar sello virtual
+  description: |
+    Genera una URL pública, única y no predecible para que un sistema externo
+    la disponibilice al cliente final sin requerir login.
+
+    El sello virtual queda asociado a una guía específica y debe ser tratado
+    como una credencial temporal. Si se invoca nuevamente con la misma guía,
+    la API puede devolver el sello activo existente o generar uno nuevo según
+    la política configurada para el cliente.
+  operationId: createVirtualSeal
+  security:
+    - api_key: []
+    - basic_auth: []
+  parameters:
+    - name: ticket
+      in: path
+      required: true
+      description: Código de la guía para generar el sello virtual.
+      schema:
+        type: string
+        example: "11250304"
+  responses:
+    '201':
+      description: Sello virtual generado correctamente
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/VirtualSealLinkResponse.yaml
+    '400':
+      description: Código de guía inválido
+    '401':
+      description: Credenciales inválidas
+    '404':
+      description: Guía no encontrada
+    '409':
+      description: La guía no permite generar un sello virtual en su estado actual

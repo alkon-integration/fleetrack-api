@@ -1,0 +1,36 @@
+type: object
+title: VirtualSealLinkResponse
+required:
+  - ticket
+  - token
+  - url
+  - expiresAt
+properties:
+  ticket:
+    description: Código de la guía asociada al link.
+    type: string
+    examples:
+      - "11250304"
+  token:
+    description: Identificador único, aleatorio y no predecible del sello virtual.
+    type: string
+    examples:
+      - "vsl_2Zp7mQn8Kx4Hc9Rt6Bf3Yw"
+  url:
+    description: URL pública que el sistema externo debe disponibilizar al cliente final.
+    type: string
+    format: uri
+    examples:
+      - "https://api.fleetrack.eu/alkon/v1/virtual-seal/vsl_2Zp7mQn8Kx4Hc9Rt6Bf3Yw"
+  expiresAt:
+    description: Fecha y hora de expiración del link.
+    type: string
+    format: date-time
+    examples:
+      - "2026-05-15T20:37:00Z"
+  createdAt:
+    description: Fecha y hora de creación del link.
+    type: string
+    format: date-time
+    examples:
+      - "2026-05-14T20:37:00Z"
